@@ -10,16 +10,32 @@
 #include "Queue.hpp"
 
 int main(int argc, const char * argv[]) {
-    Queue<char, 5> s;
-
-//    s.push('a');
-//    s.push('b');
-//    s.push('c');
-//    s.push('d');
-//    s.push('e');
-//    
-//   // std::cout<<s.pop()<<std::endl;
-
-    
-    return 0;
+        Queue <std::string, 5> q;
+        //Test empty().
+        std::cout << "Test empty(). Expected 1" << std::endl;
+        std::cout << q.empty() << std::endl;
+        
+        //Test push().
+        q.push("Apple");
+        q.push("Orange");
+        q.push("Grape");
+        q.push("Strawberry");
+        q.push("Blueberry");
+        
+        //Test pop(). Expected "Apple"
+        std::cout << "Test pop(). Expected \"Apple\"" << std::endl;
+        std::cout << q.pop() << std::endl;
+        
+        //Test size(). Expected 4
+        std::cout << "Test size(). Expected 4" << std::endl;
+        std::cout << q.size() << std::endl;
+        
+        //Test getFront(). Expected "Orange"
+        std::cout << "Test getFront(). Expected \"Orange\"" << std::endl;
+        std::cout << q.getFront() << std::endl;
+        
+        //Test getBack(). Expected "Blueberry"
+        std::cout << "Test getBack(). Expected \"Blueberry\"" << std::endl;
+        std::cout << q.getBack() << std::endl;
+        return 0;
 }
