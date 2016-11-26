@@ -45,6 +45,12 @@ private:
  {
 	delete[] items;
  }
+
+ template<class Type, int MaxQueue>
+ int Queue<Type, MaxQueue>::size()
+ {
+    return back - front + 1;
+ }
  
  template<class Type, int MaxQueue>
  int Queue<Type, MaxQueue>::empty()
@@ -57,13 +63,7 @@ private:
  {
 	return back + 1 == MaxQueue;
  }
- 
- template<class Type, int MaxQueue>
- int Queue<Type, MaxQueue>::size()
- {
-	return back - front + 1;
- }
- 
+
  template<class Type, int MaxQueue>
  Type Queue<Type, MaxQueue>::getFront()
  {
